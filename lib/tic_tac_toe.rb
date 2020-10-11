@@ -153,7 +153,7 @@ def play(board)
  # end
   
   turn(board) until over?(board)
-    turn(board)
+    # turn(board)
   
  
   if won?(board)
