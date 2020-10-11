@@ -149,11 +149,10 @@ end
 def play(board)
   num_of_turns = 0 
   until num_of_turns == 9 
-    turn(board)
     num_of_turns +=1 
   end
   
-  until over?(board)
+  turn(board) until over?(board)
     turn(board)
   end
  
