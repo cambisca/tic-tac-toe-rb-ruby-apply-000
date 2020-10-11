@@ -59,7 +59,7 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index)
-    move(board, index, value = "X")
+    move(board, index, current_player(board))
   else
     turn(board)
   end
@@ -147,6 +147,12 @@ end
 #PLAY 
 
 def play(board)
+  num_of_turns = 0 
+  until num_of_turns == 9 
+    turn(board)
+    num_of_turns +=1 
+  end
+  
   until over?(board)
     turn(board)
   end
