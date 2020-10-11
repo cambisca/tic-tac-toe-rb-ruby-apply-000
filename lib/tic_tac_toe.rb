@@ -147,10 +147,6 @@ end
 #PLAY 
 
 def play(board)
- # num_of_turns = 0 
-  #until num_of_turns == 9 
-  #  num_of_turns +=1 
- # end
   
   turn(board) until over?(board)
     # turn(board)
